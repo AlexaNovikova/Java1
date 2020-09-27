@@ -39,6 +39,7 @@ public class Main {
         System.out.println("Утверждение, о том что число 200 - отрицательное, это " + ifNegative(200));
         System.out.println("Утверждение, о том, что число -40 - отрицательное, это  " + ifNegative(-40));
         greeting("Иван");
+        // бесконечный цикл
         while (true) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Для завершения работы нажмите 0");
@@ -48,7 +49,7 @@ public class Main {
             {
                 break;
             }
-            ifLeapYear(year);
+            ifLeapYear(year);   // проверка , является ли введенный год високосным
         }
     }
 
