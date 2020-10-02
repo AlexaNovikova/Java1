@@ -47,13 +47,13 @@ public class Main {
     }
 
     // метод, возвращает true если введенная буква ( из слова, введенного пользователем) есть в загаданном слове в той же позиции
-    public static boolean hasLetter ( char inputLetter, String word, char[] result)
+    public static boolean hasLetter ( char inputLetter, String word, char[] result, int letterPosition)
     {
-        for (int j = 0; j < word.length(); j++) {
-            if (word.charAt(j) == inputLetter ) {
-                result[j]=inputLetter;
+
+            if (word.charAt(letterPosition) == inputLetter ) {
+                result[letterPosition]=inputLetter;
                 return true;
-            }
+
         }
         return false;
     }
@@ -61,9 +61,10 @@ public class Main {
     // метод возвращает true, если все буквы введенного слова совпадают с загаданным словом
     public static boolean guessWord (String inputWord, String guessedWord, char[] result) {
         int n = 0;
-        for (int i = 0; i < inputWord.length(); i++) {
+        int wordsLength = (inputWord.length()>guessedWord.length())?guessedWord.length():inputWord.length();
+        for (int i = 0; i < wordsLength; i++) {
             char inputLetter = inputWord.charAt(i);
-            if (hasLetter(inputLetter, guessedWord, result)) {
+            if (hasLetter(inputLetter, guessedWord, result, i )) {
                 n++;
             }
         }
