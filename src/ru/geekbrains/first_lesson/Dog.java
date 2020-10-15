@@ -16,26 +16,4 @@ public class Dog extends Animal {
         }
     }
 
-    @Override
-    void run(int length) {
-        if (length<=this.runDistance)
-        {
-            System.out.println(name + " пробежал " + length + " метров/а.");
-        }
-        else {
-            System.out.println(name + " не может пробежать больше " + runDistance + " метров/а.");
-        }
-    }
-
-    @Override
-    void jump(double height) {
-        if (height<=this.jumpHeight)
-        {
-            System.out.println(name + " прыгнул на высоту "+ height +" метров/а.");
-        }
-        else {
-            System.out.println(name+ " не может прыгнуть на высоту больше " + jumpHeight + " метров/а.");
-        }
-    }
-
 }
