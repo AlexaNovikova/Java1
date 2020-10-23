@@ -23,6 +23,11 @@ public class myWindow extends JFrame{
         this.setVisible(true);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        Font myFont = new Font("Italic", Font.BOLD, 15);
+        label1.setFont(myFont);
+        label2.setFont(myFont);
+        comboBoxOperationType.setFont(myFont);
+        label3.setFont(myFont);
         Container c=getContentPane();
         c.setLayout(new FlowLayout(FlowLayout.CENTER,10,15));
         c.add(label1);
